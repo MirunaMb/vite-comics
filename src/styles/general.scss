@@ -2,5 +2,11 @@
 @use './partials/mixins' as *;
 
 body{
-    background-color:antiquewhite;
+    background-color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
