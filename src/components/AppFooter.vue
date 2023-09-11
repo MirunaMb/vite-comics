@@ -94,22 +94,22 @@ export default {
       </div>
       <div class="menu-footer">
     <ul>
-        <li v-for="(item, index) in menuItems" :key="index" :class="{ 'first-item': index === 0 }">
+        <li v-for="(item, index) in menuItems" :key="index" :class=" (index == 0) ? 'first-item':'' ">
         <a href="item.url">{{ item.text }}</a>
         </li>
 
-        <li v-for="(item,index) in shops" :key="index" :class="{ 'first-item': index === 0 }">
+        <li v-for="(item,index) in shops" :key="index" :class=" (index == 0) ? 'first-item':'' " >
             <a href="item.url">{{ item.text }}</a>
         </li>
         
     </ul>
     <ul>
-        <li v-for="(item,index) in terms" :key="index" :class="{ 'first-item': index === 0 }">
+        <li v-for="(item,index) in terms" :key="index" :class=" (index == 0) ? 'first-item':'' ">
         <a href="item.url">{{ item.text }}</a>
         </li>
     </ul>
     <ul>
-        <li v-for="(item,index) in sites" :key="index" :class="{ 'first-item': index === 0 }">
+        <li v-for="(item,index) in sites" :key="index" :class=" (index == 0) ? 'first-item':'' " >
         <a href="item.url">{{ item.text }}</a>
         </li>
     </ul>
@@ -120,7 +120,7 @@ export default {
             <button class="sign-up">SIGN-UP NOW!</button>
         </div>
         <div class="footer-pic">
-            <p class="follow">FOLLOW US</p>
+            <p id="follow-us" class="follow">FOLLOW US</p>
         <div class="pics">
             <ul>
                 <li v-for="image in images" >
@@ -154,23 +154,27 @@ export default {
     display: flex;
     flex-wrap: wrap;
 
+    
     ul {
         list-style: none;
 
         li {
             width: 5rem;
 
-            &.first-item {
-                color: white;
-            }
+            
 
             a {
                 text-decoration: none;
                 color: #777876;
             }
         }
+        li.first-item a {
+                color: white;
+            }
     }
+    
 }
+
 
 .bottom-footer{
     background-color: #303030;
